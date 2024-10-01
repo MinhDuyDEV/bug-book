@@ -18,7 +18,7 @@ model User {
   googleId     String?   @unique
   avatarUrl    String?
   bio          String?
-  session      Session[]
+  sessions     Session[]
 
   createdAt DateTime @default(now())
 
@@ -29,5 +29,7 @@ model Session {
   id        String   @id
   userId    String
   expiresAt DateTime
-  User      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sessions")
 }
