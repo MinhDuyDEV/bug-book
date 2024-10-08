@@ -1,7 +1,9 @@
-import { PostData } from "@/lib/types";
 import Link from "next/link";
-import UserAvatar from "../UserAvatar";
+
+import { PostData } from "@/lib/types";
 import { formatRelativeDate } from "@/lib/utils";
+
+import UserAvatar from "../UserAvatar";
 
 interface PostProps {
   post: PostData;

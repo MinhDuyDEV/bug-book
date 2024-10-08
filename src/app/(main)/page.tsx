@@ -1,7 +1,7 @@
-import PostEditor from "@/components/posts/editor/PostEditor";
-import Post from "@/components/posts/Post";
 import prisma from "@/lib/prisma";
+import Post from "@/components/posts/Post";
 import { PostDataInclude } from "@/lib/types";
+import PostEditor from "@/components/posts/editor/PostEditor";
 
 const Home = async () => {
   const posts = await prisma.post.findMany({

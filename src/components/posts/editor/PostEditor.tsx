@@ -1,13 +1,15 @@
 "use client";
 
-import { EditorContent, useEditor } from "@tiptap/react";
 import StarterKit from "@tiptap/starter-kit";
 import Placeholder from "@tiptap/extension-placeholder";
-import { submitPost } from "./actions";
+import { EditorContent, useEditor } from "@tiptap/react";
+
+import { Button } from "@/components/ui/button";
 import UserAvatar from "@/components/UserAvatar";
 import { useSession } from "@/app/(main)/SessionProvider";
-import { Button } from "@/components/ui/button";
+
 import "./styles.css";
+import { submitPost } from "./actions";
 
 const PostEditor = () => {
   const { user } = useSession();
